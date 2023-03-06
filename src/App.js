@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./Components/Header";
+import AddTask from "./Components/AddTask";
+import TaskList from "./Components/TaskList";
+//import Boxes from './Components/Boxes';
+import { useState } from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    let defaultTasks = [
+        {
+            id: 4398,
+            name: 'Get the coffee machine fixed',
+            complete: true
+        },
+        {
+            id: 1854,
+            name: 'Buy grocery',
+            complete: true
+        },
+        {
+            id: 1691,
+            name: 'Lunch with John doe',
+            complete: true
+        }
+    ];
+
+    let [taskList, setTaskList] = useState(defaultTasks);
+    
+    return(
+        <div className="app">
+            <Header title="My App List" />
+            <AddTask taskList={taskList} setTaskList={setTaskList} />
+            <TaskList taskList={taskList} setTaskList={setTaskList} />            
+            
+        </div>
+
+    );
 }
 
 export default App;

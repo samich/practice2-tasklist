@@ -1,0 +1,35 @@
+.box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;  
+    margin-bottom: 20px;  
+}
+
+.box-inner {
+    padding: 10px;
+    border-radius: 2px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.box h3 {
+    margin-bottom: 10px;
+}
+
+.success {
+    background: #b8e994;
+    color: #366514;
+}
+
+.alert {
+    background: #f7d794;
+    color: #7A560A;
+}
+
+.warning {
+    background: #e66767;    
+}
+
+.hide {
+    display: none;
+}
